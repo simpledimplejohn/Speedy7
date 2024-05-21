@@ -1,0 +1,30 @@
+<!-- app/templates/tomato.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tomato Form</title>
+</head>
+<body>
+    <h1>Tomato Form</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="tomato_name">Tomato Name:</label>
+        <input type="text" id="tomato_name" name="tomato_name" value="{{ tomato_name|default_if_none:'' }}"><br>
+        <label for="tomato_description">Tomato Description:</label>
+        <textarea id="tomato_description" name="tomato_description">{{ tomato_description|default_if_none:'' }}</textarea><br>
+        <label for="tomato_number">Tomato Number:</label>
+        <input type="number" id="tomato_number" name="tomato_number" value="{{ tomato_number|default_if_none:'' }}"><br>
+        <label><input type="checkbox" name="is_tomato" {% if is_tomato %}checked{% endif %}> Is Tomato</label><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if tomato_name %}
+        <h2>Form Data:</h2>
+        <p>Tomato Name: {{ tomato_name }}</p>
+        <p>Tomato Description: {{ tomato_description }}</p>
+        <p>Tomato Number: {{ tomato_number }}</p>
+        <p>Is Tomato: {{ is_tomato }}</p>
+    {% endif %}
+</body>
+</html>
