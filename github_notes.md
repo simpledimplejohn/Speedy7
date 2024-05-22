@@ -15,7 +15,7 @@ https://github.com/AScotty27/Speedy7.git
    - `git remote add upstream https://github.com/AScotty27/Speedy7.git`
 
 4. **Create a New Branch**
-   - `git checkout -b feature-branch-name`
+   - `git checkout -b jbdev`
 
 5. **Make Changes and Commit**
    - Make your changes.
@@ -23,7 +23,7 @@ https://github.com/AScotty27/Speedy7.git
    - `git commit -m "Description of changes"`
 
 6. **Push Changes to Your Fork**
-   - `git push origin feature-branch-name`
+   - `git push origin jbdev`
 
 7. **Create a Pull Request**
    - Go to your forked repository on GitHub.
@@ -36,7 +36,7 @@ https://github.com/AScotty27/Speedy7.git
    - `git checkout main`
    - `git merge upstream/main`
    - `git push origin main`
-   - Update feature branch: `git checkout feature-branch-name` and `git merge main`
+   - Update feature branch: `git checkout jbdev` and `git merge main`
 
 This list provides a concise guide to cloning a Git repository, making changes, and creating a pull request.
 
@@ -67,7 +67,7 @@ This list provides a concise guide to cloning a Git repository, making changes, 
 
 4. **Create a New Branch**
    ```bash
-   git checkout -b feature-branch-name
+   git checkout -b jbdev
    ```
 
 5. **Make Changes and Commit**
@@ -78,7 +78,7 @@ This list provides a concise guide to cloning a Git repository, making changes, 
 
 6. **Push Changes to Your Fork**
    ```bash
-   git push origin feature-branch-name
+   git push origin jbdev
    ```
 
 ### Notes:
