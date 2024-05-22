@@ -3,7 +3,6 @@ from . import views
 
 urlpatterns = [
     path("", views.index, name="index"),
-    path('tomato/', views.tomato_view,name='tomato'),
     path('variables/', views.variables_view, name='variables'),
     path('new_variable/', views.new_variable, name='new_variable'),
     path('delete_variable/', views.delete_variable, name='delete_variable'),
