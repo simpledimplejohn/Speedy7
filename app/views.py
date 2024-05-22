@@ -51,8 +51,8 @@ def new_variable(request):
         try:
             response = requests.post(api_url, headers=headers, json=data)
             response_data = response.json()  # Extract JSON response content
-            if response.status_code == 200:
-                return JsonResponse({"status": "success", "message": "Variable created successfully!"})
+            if response.status_code == 201:
+                return JsonResponse({"status": "success", "message": "Variable created successfully!", "data": response_data})
             else:
                 return JsonResponse({
                     "status": "error", 
